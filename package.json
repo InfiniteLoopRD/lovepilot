@@ -4,6 +4,14 @@
   "description": "MCP server for LÖVE2D game development",
   "type": "module",
   "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InfiniteLoopRD/love2d-mcp.git"
+  },
+  "homepage": "https://github.com/InfiniteLoopRD/love2d-mcp",
+  "bugs": {
+    "url": "https://github.com/InfiniteLoopRD/love2d-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",

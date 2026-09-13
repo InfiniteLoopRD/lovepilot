@@ -1,5 +1,8 @@
 # LÖVE2D MCP Server
 
+[![GitHub](https://img.shields.io/badge/GitHub-InfiniteLoopRD%2Flove2d--mcp-181717?logo=github)](https://github.com/InfiniteLoopRD/love2d-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A Model Context Protocol (MCP) server that enables AI assistants to interact with running LÖVE2D games in real time: introspect state, simulate keyboard/mouse input so the AI can actually play, capture screenshots, execute Lua code, and receive push notifications when the game state changes.
 
 Fork/extension of [shayarnett/love2d-mcp](https://github.com/shayarnett/love2d-mcp) with real-time play capabilities and a more robust TCP client.
@@ -41,7 +44,7 @@ Fork/extension of [shayarnett/love2d-mcp](https://github.com/shayarnett/love2d-m
 ## Setup
 
 ```bash
-git clone <your-repo-url> love2d-mcp
+git clone https://github.com/InfiniteLoopRD/love2d-mcp.git
 cd love2d-mcp
 npm install
 npm run build
