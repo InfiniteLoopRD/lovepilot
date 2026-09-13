@@ -51,7 +51,6 @@ For the full technical walkthrough (development notes, in Spanish), see [CAMBIOS
 
 - Node.js 18+ and npm
 - LÖVE2D 11.0+ ([download here](https://love2d.org))
-- Git (optional, for cloning)
 
 ## Setup
 
