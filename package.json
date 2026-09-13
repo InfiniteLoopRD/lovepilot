@@ -18,7 +18,7 @@
     "start": "node build/index.js"
   },
   "keywords": ["mcp", "love2d", "game-development"],
-  "author": "",
+  "author": "InfiniteLoopRD",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",

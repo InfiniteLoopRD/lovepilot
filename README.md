@@ -7,6 +7,18 @@ A Model Context Protocol (MCP) server that enables AI assistants to interact wit
 
 Fork/extension of [shayarnett/love2d-mcp](https://github.com/shayarnett/love2d-mcp) with real-time play capabilities and a more robust TCP client.
 
+## What's different from the original
+
+This fork adds the real-time play capabilities and reliability fixes that make an AI genuinely playable against a live LÖVE2D game, on top of the original `shayarnett/love2d-mcp`:
+
+- **Real-time play** — `send_input` lets the AI control the game through the bridge (keyboard + mouse), `get_screenshot` captures the window as a viewable PNG, and `watch_game_state` pushes `state_changed` events the moment anything changes (no polling).
+- **Request tracking (`_reqId`)** — every command carries a request id; a late reply from the game can never be misattributed to the wrong command after a timeout. Screenshot capture is also wrapped in `pcall` so a failing encode returns an error instead of crashing the game.
+- **Command timeout** — configurable per-command timeout (15s default) so a hung game reports an error to the AI instead of waiting forever.
+- **Hot-reload that survives references** — `reload_code` mutates module tables in place (same table identity, updated contents), so existing `require()` references keep working. `game/handle.lua` wraps non-table engine objects (physics bodies, audio sources, canvases) so even those can be re-bound safely after a reload.
+- **Loaded tool set** — `get_objects` (list or by id), `run_lua`, `list_lua_files`, `reload_code`, `send_input`, `get_screenshot`, `watch_game_state` / `unwatch_game_state`.
+
+For the full technical walkthrough (development notes, in Spanish), see [CAMBIOS_TIEMPO_REAL.es.md](CAMBIOS_TIEMPO_REAL.es.md).
+
 ## Features
 
 - **Real-time introspection** — query game objects, positions, properties, and state
@@ -152,6 +164,15 @@ Stop receiving state-change notifications.
 
 **Returns:** `{ok: true, message: "unsubscribed"}`.
 
+### `list_lua_files`
+
+List every `.lua` file in the game project. Real games are usually split across several files (`main.lua` plus modules), so check this before deciding what to edit and pass to `reload_code` — don't assume everything lives in `main.lua`.
+
+**Arguments:**
+- `dir` (string, optional): subfolder to scan, relative to the game's source folder. Defaults to the project root.
+
+**Returns:** the list of `.lua` files found under the scanned directory.
+
 ### `reload_code`
 
 Hot-reload a Lua file from disk into the running game. **LÖVE does not do this on its own** — editing a `.lua` file while the game is running has zero effect until you restart the process, unless you call this tool.
@@ -223,8 +244,10 @@ love2d-mcp/
 ├── game/
 │   ├── main.lua            # example: bouncing balls + an AI/keyboard-controllable
 │   │                       # square (idle/walking/attacking states, no real combat)
+│   ├── handle.lua          # `Handle` wrapper so non-table engine objects
+│   │                       # (physics, audio, canvases) survive code reloads
 │   └── mcp_bridge.lua      # Lua TCP bridge module
-├── CAMBIOS_TIEMPO_REAL.md  # (Spanish) real-time features walkthrough
+├── CAMBIOS_TIEMPO_REAL.es.md # (Spanish) real-time features walkthrough
 ├── package.json
 ├── tsconfig.json
 └── README.md

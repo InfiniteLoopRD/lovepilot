@@ -78,6 +78,14 @@ Thank you for your interest in contributing! This document provides guidelines f
 
 ## Testing
 
+This project does not have an automated test suite yet. Verification is done
+manually against a running game, using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
+
+```bash
+love game/           # terminal 1: start the example game (bridge on port 12345)
+npx @modelcontextprotocol/inspector node build/index.js   # terminal 2: connect the inspector
+```
+
 ### Manual Testing Checklist
 
 Before submitting a PR, verify:
@@ -151,7 +159,7 @@ Use conventional commits style:
 
 ### Known Issues
 
-Check the [Issues](https://github.com/shayarnett/love2d-mcp/issues) page for:
+Check the [Issues](https://github.com/InfiniteLoopRD/love2d-mcp/issues) page for:
 - Bug reports
 - Feature requests
 - Good first issues (labeled `good-first-issue`)
@@ -174,8 +182,8 @@ Check the [Issues](https://github.com/shayarnett/love2d-mcp/issues) page for:
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/shayarnett/love2d-mcp/discussions)
-- Check existing [Issues](https://github.com/shayarnett/love2d-mcp/issues)
+- Open a [Discussion](https://github.com/InfiniteLoopRD/love2d-mcp/discussions)
+- Check existing [Issues](https://github.com/InfiniteLoopRD/love2d-mcp/issues)
 - Review the [README](README.md) and documentation
 
 ## License
