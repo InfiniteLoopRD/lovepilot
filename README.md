@@ -3,7 +3,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-InfiniteLoopRD%2Flovepilot-181717?logo=github)](https://github.com/InfiniteLoopRD/lovepilot)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A Model Context Protocol (MCP) server that enables AI assistants to interact with running LÖVE2D games in real time: introspect state, simulate keyboard/mouse input so the AI can actually play, capture screenshots, execute Lua code, and receive push notifications when the game state changes.
+LovePilot is an advanced **Model Context Protocol (MCP)** server designed specifically for the **LÖVE / LÖVE2D** game engine — the most complete MCP server for playing a live LÖVE2D game: introspect real-time state, simulate keyboard/mouse input so the AI can actually play, capture screenshots, execute Lua code, hot-reload modules, and receive push notifications the moment the game state changes.
 
 Fork/extension of [shayarnett/love2d-mcp](https://github.com/shayarnett/love2d-mcp) with real-time play capabilities and a more robust TCP client.
 
