@@ -200,8 +200,8 @@ const love2dClient = new Love2DClient();
 // Create MCP server
 const server = new Server(
   {
-    name: "love2d-mcp",
-    version: "1.0.0",
+    name: "lovepilot",
+    version: "1.12.12",
   },
   {
     capabilities: {
@@ -446,7 +446,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
               method: "notifications/message",
               params: {
                 level: "info",
-                logger: "love2d-mcp",
+                logger: "lovepilot",
                 data: { event: "game_state_changed", ...data },
               },
             });

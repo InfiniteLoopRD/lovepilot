@@ -1,4 +1,4 @@
-# Contributing to LÖVE2D MCP Server
+﻿# Contributing to LovePilot
 
 Thank you for your interest in contributing! This document provides guidelines for contributing to the project.
 
@@ -7,8 +7,8 @@ Thank you for your interest in contributing! This document provides guidelines f
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/love2d-mcp.git
-   cd love2d-mcp
+   git clone https://github.com/YOUR_USERNAME/lovepilot.git
+   cd lovepilot
    ```
 3. Install dependencies:
    ```bash
@@ -159,7 +159,7 @@ Use conventional commits style:
 
 ### Known Issues
 
-Check the [Issues](https://github.com/InfiniteLoopRD/love2d-mcp/issues) page for:
+Check the [Issues](https://github.com/InfiniteLoopRD/lovepilot/issues) page for:
 - Bug reports
 - Feature requests
 - Good first issues (labeled `good-first-issue`)
@@ -182,8 +182,8 @@ Check the [Issues](https://github.com/InfiniteLoopRD/love2d-mcp/issues) page for
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/InfiniteLoopRD/love2d-mcp/discussions)
-- Check existing [Issues](https://github.com/InfiniteLoopRD/love2d-mcp/issues)
+- Open a [Discussion](https://github.com/InfiniteLoopRD/lovepilot/discussions)
+- Check existing [Issues](https://github.com/InfiniteLoopRD/lovepilot/issues)
 - Review the [README](README.md) and documentation
 
 ## License

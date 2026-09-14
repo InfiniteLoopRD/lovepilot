@@ -1,6 +1,6 @@
-# LÖVE2D MCP Server
+# LovePilot — LÖVE2D MCP Server
 
-[![GitHub](https://img.shields.io/badge/GitHub-InfiniteLoopRD%2Flove2d--mcp-181717?logo=github)](https://github.com/InfiniteLoopRD/love2d-mcp)
+[![GitHub](https://img.shields.io/badge/GitHub-InfiniteLoopRD%2Flovepilot-181717?logo=github)](https://github.com/InfiniteLoopRD/lovepilot)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A Model Context Protocol (MCP) server that enables AI assistants to interact with running LÖVE2D games in real time: introspect state, simulate keyboard/mouse input so the AI can actually play, capture screenshots, execute Lua code, and receive push notifications when the game state changes.
@@ -55,8 +55,8 @@ For the full technical walkthrough (development notes, in Spanish), see [CAMBIOS
 ## Setup
 
 ```bash
-git clone https://github.com/InfiniteLoopRD/love2d-mcp.git
-cd love2d-mcp
+git clone https://github.com/InfiniteLoopRD/lovepilot.git
+cd lovepilot
 npm install
 npm run build
 ```
@@ -88,7 +88,7 @@ In a config file for Claude/Cursor/OpenCode-style clients:
   "mcpServers": {
     "love2d": {
       "command": "node",
-      "args": ["/path/to/love2d-mcp/build/index.js"]
+      "args": ["/path/to/lovepilot/build/index.js"]
     }
   }
 }
@@ -235,7 +235,7 @@ npm start       # run the compiled server
 ### Project structure
 
 ```
-love2d-mcp/
+lovepilot/
 ├── src/
 │   └── index.ts            # MCP server implementation + TCP client
 ├── build/

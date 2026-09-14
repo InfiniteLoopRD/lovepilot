@@ -1,16 +1,16 @@
 {
-  "name": "love2d-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for LÖVE2D game development",
+  "name": "lovepilot",
+  "version": "1.12.12",
+  "description": "LovePilot - real-time MCP server for playing and debugging LÖVE2D games with AI",
   "type": "module",
   "main": "build/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/InfiniteLoopRD/love2d-mcp.git"
+    "url": "https://github.com/InfiniteLoopRD/lovepilot.git"
   },
-  "homepage": "https://github.com/InfiniteLoopRD/love2d-mcp",
+  "homepage": "https://github.com/InfiniteLoopRD/lovepilot",
   "bugs": {
-    "url": "https://github.com/InfiniteLoopRD/love2d-mcp/issues"
+    "url": "https://github.com/InfiniteLoopRD/lovepilot/issues"
   },
   "scripts": {
     "build": "tsc",
